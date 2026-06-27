@@ -1,0 +1,23 @@
+[debug] [2026-06-27T14:49:32.645Z] ----------------------------------------------------------------------
+[debug] [2026-06-27T14:49:32.653Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\anshy\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2026-06-27T14:49:32.654Z] CLI Version:   15.22.3
+[debug] [2026-06-27T14:49:32.654Z] Platform:      win32
+[debug] [2026-06-27T14:49:32.654Z] Node Version:  v22.22.0
+[debug] [2026-06-27T14:49:32.654Z] Detected Agent: unknown
+[debug] [2026-06-27T14:49:32.654Z] Time:          Sat Jun 27 2026 20:19:32 GMT+0530 (India Standard Time)
+[debug] [2026-06-27T14:49:32.655Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-06-27T14:49:32.658Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\anshy\Desktop\My Files\Main\ek-lakkadhara-web
+
+[debug] [2026-06-27T14:49:36.749Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2026-06-27T14:49:36.749Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}

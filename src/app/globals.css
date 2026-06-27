@@ -1,0 +1,235 @@
+@import "tailwindcss";
+
+@theme {
+  --color-horror-black: #050505;
+  --color-horror-dark: #121212;
+  --color-horror-grey: #1a1c1e;
+  --color-horror-fog: #2c3539;
+  --color-horror-blood: #8a0303;
+  --color-horror-moon: #d2e4f0;
+  
+  --font-horror-serif: var(--font-cinzel), "Cinzel", Georgia, serif;
+  --font-horror-journal: var(--font-special-elite), "Special Elite", Courier, monospace;
+}
+
+:root {
+  --background: #050505;
+  --foreground: #d2e4f0;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', system-ui, sans-serif;
+  overflow-x: hidden;
+  user-select: none;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e2226;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8a0303;
+}
+
+/* Film Grain Overlay */
+.film-grain {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  width: 200%;
+  height: 200%;
+  background: transparent url("data:image/svg+xml,%3Csvg viewBox='0%200%20200%20200'%20xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter%20id='noiseFilter'%3E%3CfeTurbulence%20type='fractalNoise'%20baseFrequency='0.85'%20numOctaves='3'%20stitchTiles='stitch'/%3E%3C/filter%3E%3Crect%20width='100%25'%20height='100%25'%20filter='url(%23noiseFilter)'/%3E%3C/svg%3E") repeat;
+  opacity: 0.055;
+  pointer-events: none;
+  z-index: 9999;
+  animation: grain 8s steps(10) infinite;
+}
+
+@keyframes grain {
+  0%, 100% { transform:translate(0, 0); }
+  10% { transform:translate(-5%, -10%); }
+  20% { transform:translate(-15%, 5%); }
+  30% { transform:translate(7%, -25%); }
+  40% { transform:translate(-5%, 25%); }
+  50% { transform:translate(-15%, 10%); }
+  60% { transform:translate(15%, 0%); }
+  70% { transform:translate(0%, 15%); }
+  80% { transform:translate(3%, 35%); }
+  90% { transform:translate(-10%, 10%); }
+}
+
+/* Scanline and CRT Effect for static jump scare overlay */
+.scanlines {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.25) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.06),
+    rgba(0, 255, 0, 0.02),
+    rgba(0, 0, 255, 0.06)
+  );
+  background-size: 100% 4px, 6px 100%;
+  pointer-events: none;
+  z-index: 9990;
+}
+
+/* Vignette Overlay */
+.vignette-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(0,0,0,0) 30%, rgba(0,0,0,0.85) 90%);
+  pointer-events: none;
+  z-index: 100;
+}
+
+/* Text Glow (Runes) */
+.rune-glow {
+  text-shadow: 0 0 5px rgba(255, 0, 0, 0.5), 0 0 15px rgba(255, 0, 0, 0.3);
+}
+
+.moon-glow {
+  text-shadow: 0 0 10px rgba(210, 228, 240, 0.4), 0 0 20px rgba(210, 228, 240, 0.2);
+}
+
+/* Old Paper styling for journals */
+.journal-note {
+  background-image: url('/journal_page.png');
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0 0 60px rgba(0,0,0,0.85), 0 15px 30px rgba(0,0,0,0.5);
+  color: #2b1f1d;
+  font-family: 'Special Elite', Courier, monospace;
+}
+
+/* Wood Board Texture */
+.wood-board {
+  background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.85)), 
+              repeating-linear-gradient(90deg, #1c1311 0px, #1c1311 10px, #160e0d 10px, #160e0d 20px);
+  border: 4px solid #140d0c;
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.9), 0 10px 20px rgba(0,0,0,0.8);
+}
+
+/* Light Flickering Keyframes */
+@keyframes flicker {
+  0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+    opacity: 0.99;
+  }
+  20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+    opacity: 0.2;
+  }
+}
+
+.flicker-slow {
+  animation: flicker 4s infinite alternate;
+}
+
+.flicker-fast {
+  animation: flicker 1.5s infinite alternate;
+}
+
+/* Cinematic Chromatic Aberration */
+.chromatic-aberration {
+  text-shadow: -2px 0 0px rgba(255,0,0,0.8), 2px 0 0px rgba(0,0,255,0.8);
+}
+
+/* Glitch Animation */
+@keyframes glitch {
+  0% {
+    clip-path: inset(40% 0 61% 0);
+    transform: skew(0.3deg);
+  }
+  20% {
+    clip-path: inset(92% 0 1% 0);
+    transform: skew(-0.5deg);
+  }
+  40% {
+    clip-path: inset(15% 0 80% 0);
+    transform: skew(0.5deg);
+  }
+  60% {
+    clip-path: inset(80% 0 5% 0);
+    transform: skew(-0.2deg);
+  }
+  80% {
+    clip-path: inset(5% 0 92% 0);
+    transform: skew(0.1deg);
+  }
+  100% {
+    clip-path: inset(40% 0 61% 0);
+    transform: skew(0deg);
+  }
+}
+
+.glitch-text {
+  position: relative;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #050505;
+}
+
+.glitch-text::before {
+  left: 2px;
+  text-shadow: -2px 0 #ff0000;
+  clip-path: inset(45% 0 45% 0);
+  animation: glitch 1.5s infinite linear alternate-reverse;
+}
+
+.glitch-text::after {
+  left: -2px;
+  text-shadow: -2px 0 #0000ff, 0 2px #ff0000;
+  clip-path: inset(50% 0 30% 0);
+  animation: glitch 2s infinite linear alternate-reverse;
+}
+
+/* Subtle Breathing Animation for Lumberjack characters */
+@keyframes breath {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+.breath-animation {
+  animation: breath 6s ease-in-out infinite;
+}
+
+/* Lenis Custom Smooth scroll */
+html.lenis {
+  height: auto;
+}
+
+.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis-smooth [data-lenis-prevent] {
+  overflow: clip;
+}
+
+.lenis-smooth iframe {
+  pointer-events: none;
+}
