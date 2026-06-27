@@ -111,14 +111,14 @@ export default function JumpscareManager() {
     const interval = setInterval(() => {
       if (cooldownRef.current) return;
       const roll = Math.random();
-      if (roll < 0.18)       triggerJumpscare('glitch');
-      else if (roll < 0.32)  triggerJumpscare('eyes');
-      else if (roll < 0.45)  triggerJumpscare('face');
-      else if (roll < 0.56)  triggerJumpscare('scream');
-      else if (roll < 0.66)  triggerJumpscare('blackout');
-      else if (roll < 0.74)  triggerJumpscare('crack');
-      else if (roll < 0.82)  triggerJumpscare('possession');
-      else if (roll < 0.91)  triggerJumpscare('strobe');
+      if (roll < 0.18) triggerJumpscare('glitch');
+      else if (roll < 0.32) triggerJumpscare('eyes');
+      else if (roll < 0.45) triggerJumpscare('face');
+      else if (roll < 0.56) triggerJumpscare('scream');
+      else if (roll < 0.66) triggerJumpscare('blackout');
+      else if (roll < 0.74) triggerJumpscare('crack');
+      else if (roll < 0.82) triggerJumpscare('possession');
+      else if (roll < 0.91) triggerJumpscare('strobe');
       // ~9% chance nothing happens — keeps user on edge
     }, 20000 + Math.random() * 20000);
 
@@ -290,7 +290,7 @@ export default function JumpscareManager() {
           >
             <div className="w-full h-full max-w-3xl max-h-3xl filter contrast-[300%] brightness-[35%] mix-blend-screen select-none">
               <svg viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-                <path d="M150 100 Q250 80 350 100 Q400 200 400 300 Q400 450 250 480 Q100 450 100 300 Q100 200 150 100 Z" fill="#1c0404" stroke="#8a0303" strokeWidth="4"/>
+                <path d="M150 100 Q250 80 350 100 Q400 200 400 300 Q400 450 250 480 Q100 450 100 300 Q100 200 150 100 Z" fill="#1c0404" stroke="#8a0303" strokeWidth="4" />
                 <circle cx="200" cy="220" r="30" fill="#000" stroke="#ff0000" strokeWidth="4" />
                 <circle cx="300" cy="220" r="30" fill="#000" stroke="#ff0000" strokeWidth="4" />
                 <circle cx="200" cy="220" r="10" fill="#ffffff" />
@@ -301,7 +301,7 @@ export default function JumpscareManager() {
                 <line x1="250" y1="365" x2="250" y2="405" stroke="#8a0303" strokeWidth="4" />
                 <line x1="285" y1="358" x2="285" y2="398" stroke="#8a0303" strokeWidth="4" />
                 <line x1="315" y1="350" x2="315" y2="390" stroke="#8a0303" strokeWidth="4" />
-                <path d="M110 130 L390 130 L350 50 L150 50 Z" fill="#0c0202" stroke="#8a0303" strokeWidth="3"/>
+                <path d="M110 130 L390 130 L350 50 L150 50 Z" fill="#0c0202" stroke="#8a0303" strokeWidth="3" />
                 {/* Axe outline */}
                 <path d="M420 380 L460 340 L480 360 L450 400 Z" fill="#3a0000" stroke="#8a0303" strokeWidth="2" />
               </svg>
@@ -327,25 +327,25 @@ export default function JumpscareManager() {
                 {/* Head */}
                 <ellipse cx="300" cy="340" rx="200" ry="280" fill="#0a0000" stroke="#cc0000" strokeWidth="5" />
                 {/* Wide-open terrified eyes */}
-                <ellipse cx="220" cy="260" rx="45" ry="55" fill="#fff" stroke="#cc0000" strokeWidth="4"/>
-                <circle cx="220" cy="275" r="25" fill="#000"/>
-                <circle cx="230" cy="265" r="8" fill="#fff"/>
-                <ellipse cx="380" cy="260" rx="45" ry="55" fill="#fff" stroke="#cc0000" strokeWidth="4"/>
-                <circle cx="380" cy="275" r="25" fill="#000"/>
-                <circle cx="390" cy="265" r="8" fill="#fff"/>
+                <ellipse cx="220" cy="260" rx="45" ry="55" fill="#fff" stroke="#cc0000" strokeWidth="4" />
+                <circle cx="220" cy="275" r="25" fill="#000" />
+                <circle cx="230" cy="265" r="8" fill="#fff" />
+                <ellipse cx="380" cy="260" rx="45" ry="55" fill="#fff" stroke="#cc0000" strokeWidth="4" />
+                <circle cx="380" cy="275" r="25" fill="#000" />
+                <circle cx="390" cy="265" r="8" fill="#fff" />
                 {/* Wide screaming mouth */}
-                <ellipse cx="300" cy="430" rx="80" ry="60" fill="#0a0000" stroke="#cc0000" strokeWidth="5"/>
+                <ellipse cx="300" cy="430" rx="80" ry="60" fill="#0a0000" stroke="#cc0000" strokeWidth="5" />
                 <path d="M230 430 Q300 500 370 430" fill="#330000" />
                 {/* Teeth */}
-                <rect x="255" y="400" width="18" height="35" fill="#eeeeee" rx="2"/>
-                <rect x="278" y="395" width="18" height="40" fill="#eeeeee" rx="2"/>
-                <rect x="302" y="395" width="18" height="40" fill="#eeeeee" rx="2"/>
-                <rect x="326" y="400" width="18" height="35" fill="#eeeeee" rx="2"/>
+                <rect x="255" y="400" width="18" height="35" fill="#eeeeee" rx="2" />
+                <rect x="278" y="395" width="18" height="40" fill="#eeeeee" rx="2" />
+                <rect x="302" y="395" width="18" height="40" fill="#eeeeee" rx="2" />
+                <rect x="326" y="400" width="18" height="35" fill="#eeeeee" rx="2" />
                 {/* Hair / hat */}
-                <path d="M100 200 L500 200 L460 80 L140 80 Z" fill="#050000" stroke="#cc0000" strokeWidth="3"/>
+                <path d="M100 200 L500 200 L460 80 L140 80 Z" fill="#050000" stroke="#cc0000" strokeWidth="3" />
                 {/* Cracks / scars */}
-                <path d="M200 180 L220 220 L205 260" stroke="#cc0000" strokeWidth="2" strokeLinecap="round"/>
-                <path d="M350 300 L380 320 L370 360" stroke="#cc0000" strokeWidth="2" strokeLinecap="round"/>
+                <path d="M200 180 L220 220 L205 260" stroke="#cc0000" strokeWidth="2" strokeLinecap="round" />
+                <path d="M350 300 L380 320 L370 360" stroke="#cc0000" strokeWidth="2" strokeLinecap="round" />
               </svg>
             </div>
             <div className="absolute inset-0 bg-red-900/30" />
@@ -395,19 +395,19 @@ export default function JumpscareManager() {
           >
             <svg className="w-full h-full absolute inset-0" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
               {/* Crack lines from centre */}
-              <path d="M960 540 L820 200 L790 50" stroke="#cc0000" strokeWidth="4" fill="none" opacity="0.9"/>
-              <path d="M960 540 L1150 180 L1200 30" stroke="#cc0000" strokeWidth="3" fill="none" opacity="0.8"/>
-              <path d="M960 540 L600 700 L400 1000" stroke="#cc0000" strokeWidth="5" fill="none" opacity="0.9"/>
-              <path d="M960 540 L1300 750 L1600 1080" stroke="#cc0000" strokeWidth="4" fill="none" opacity="0.85"/>
-              <path d="M960 540 L350 460 L100 350" stroke="#cc0000" strokeWidth="3" fill="none" opacity="0.7"/>
-              <path d="M960 540 L1600 480 L1900 400" stroke="#cc0000" strokeWidth="3" fill="none" opacity="0.7"/>
+              <path d="M960 540 L820 200 L790 50" stroke="#cc0000" strokeWidth="4" fill="none" opacity="0.9" />
+              <path d="M960 540 L1150 180 L1200 30" stroke="#cc0000" strokeWidth="3" fill="none" opacity="0.8" />
+              <path d="M960 540 L600 700 L400 1000" stroke="#cc0000" strokeWidth="5" fill="none" opacity="0.9" />
+              <path d="M960 540 L1300 750 L1600 1080" stroke="#cc0000" strokeWidth="4" fill="none" opacity="0.85" />
+              <path d="M960 540 L350 460 L100 350" stroke="#cc0000" strokeWidth="3" fill="none" opacity="0.7" />
+              <path d="M960 540 L1600 480 L1900 400" stroke="#cc0000" strokeWidth="3" fill="none" opacity="0.7" />
               {/* Secondary cracks */}
-              <path d="M820 200 L700 300 L550 250" stroke="#880000" strokeWidth="2" fill="none" opacity="0.6"/>
-              <path d="M1150 180 L1280 300 L1400 220" stroke="#880000" strokeWidth="2" fill="none" opacity="0.6"/>
-              <path d="M600 700 L480 800 L300 850" stroke="#880000" strokeWidth="2" fill="none" opacity="0.5"/>
+              <path d="M820 200 L700 300 L550 250" stroke="#880000" strokeWidth="2" fill="none" opacity="0.6" />
+              <path d="M1150 180 L1280 300 L1400 220" stroke="#880000" strokeWidth="2" fill="none" opacity="0.6" />
+              <path d="M600 700 L480 800 L300 850" stroke="#880000" strokeWidth="2" fill="none" opacity="0.5" />
               {/* Crack impact glow */}
-              <circle cx="960" cy="540" r="40" fill="#cc0000" opacity="0.5"/>
-              <circle cx="960" cy="540" r="80" fill="#880000" opacity="0.2"/>
+              <circle cx="960" cy="540" r="40" fill="#cc0000" opacity="0.5" />
+              <circle cx="960" cy="540" r="80" fill="#880000" opacity="0.2" />
             </svg>
             <div className="absolute inset-0 bg-red-950/25" />
           </motion.div>
@@ -462,16 +462,16 @@ export default function JumpscareManager() {
             >
               <svg viewBox="0 0 250 500" width="200" height="400" fill="none">
                 {/* Body silhouette */}
-                <ellipse cx="125" cy="80" rx="60" ry="70" fill="#0a0000"/>
-                <rect x="65" y="140" width="120" height="200" rx="20" fill="#0a0000"/>
+                <ellipse cx="125" cy="80" rx="60" ry="70" fill="#0a0000" />
+                <rect x="65" y="140" width="120" height="200" rx="20" fill="#0a0000" />
                 {/* Axe */}
-                <rect x="190" y="150" width="10" height="160" fill="#0a0000"/>
-                <path d="M190 150 L240 120 L250 160 L200 180 Z" fill="#1a0000" stroke="#440000" strokeWidth="2"/>
+                <rect x="190" y="150" width="10" height="160" fill="#0a0000" />
+                <path d="M190 150 L240 120 L250 160 L200 180 Z" fill="#1a0000" stroke="#440000" strokeWidth="2" />
                 {/* Glowing eyes */}
-                <circle cx="105" cy="70" r="12" fill="#ff0000" opacity="0.9"/>
-                <circle cx="145" cy="70" r="12" fill="#ff0000" opacity="0.9"/>
-                <circle cx="105" cy="70" r="5" fill="#ffaa00"/>
-                <circle cx="145" cy="70" r="5" fill="#ffaa00"/>
+                <circle cx="105" cy="70" r="12" fill="#ff0000" opacity="0.9" />
+                <circle cx="145" cy="70" r="12" fill="#ff0000" opacity="0.9" />
+                <circle cx="105" cy="70" r="5" fill="#ffaa00" />
+                <circle cx="145" cy="70" r="5" fill="#ffaa00" />
               </svg>
             </motion.div>
             <div className="absolute bottom-1/4 left-1/2 -translate-x-1/2 font-mono text-red-900 text-xs tracking-[0.5em] uppercase animate-pulse">
@@ -517,30 +517,30 @@ export default function JumpscareManager() {
                 {/* Head — bigger and more distorted */}
                 <ellipse cx="300" cy="340" rx="210" ry="290" fill="#060000" stroke="#ff0000" strokeWidth="7" />
                 {/* Wide-open terrorised eyes */}
-                <ellipse cx="215" cy="255" rx="52" ry="62" fill="#fff" stroke="#ff0000" strokeWidth="6"/>
-                <circle cx="215" cy="272" r="30" fill="#000"/>
-                <circle cx="228" cy="260" r="11" fill="#fff"/>
-                <ellipse cx="385" cy="255" rx="52" ry="62" fill="#fff" stroke="#ff0000" strokeWidth="6"/>
-                <circle cx="385" cy="272" r="30" fill="#000"/>
-                <circle cx="398" cy="260" r="11" fill="#fff"/>
+                <ellipse cx="215" cy="255" rx="52" ry="62" fill="#fff" stroke="#ff0000" strokeWidth="6" />
+                <circle cx="215" cy="272" r="30" fill="#000" />
+                <circle cx="228" cy="260" r="11" fill="#fff" />
+                <ellipse cx="385" cy="255" rx="52" ry="62" fill="#fff" stroke="#ff0000" strokeWidth="6" />
+                <circle cx="385" cy="272" r="30" fill="#000" />
+                <circle cx="398" cy="260" r="11" fill="#fff" />
                 {/* Screaming mouth — massive open */}
-                <ellipse cx="300" cy="440" rx="95" ry="80" fill="#060000" stroke="#ff0000" strokeWidth="7"/>
+                <ellipse cx="300" cy="440" rx="95" ry="80" fill="#060000" stroke="#ff0000" strokeWidth="7" />
                 <path d="M215 440 Q300 530 385 440" fill="#280000" />
                 {/* Teeth — sharp, jagged */}
-                <rect x="245" y="400" width="22" height="48" fill="#eeeeee" rx="3"/>
-                <rect x="272" y="392" width="22" height="56" fill="#eeeeee" rx="3"/>
-                <rect x="299" y="388" width="22" height="60" fill="#eeeeee" rx="3"/>
-                <rect x="326" y="392" width="22" height="56" fill="#eeeeee" rx="3"/>
-                <rect x="353" y="400" width="22" height="48" fill="#eeeeee" rx="3"/>
+                <rect x="245" y="400" width="22" height="48" fill="#eeeeee" rx="3" />
+                <rect x="272" y="392" width="22" height="56" fill="#eeeeee" rx="3" />
+                <rect x="299" y="388" width="22" height="60" fill="#eeeeee" rx="3" />
+                <rect x="326" y="392" width="22" height="56" fill="#eeeeee" rx="3" />
+                <rect x="353" y="400" width="22" height="48" fill="#eeeeee" rx="3" />
                 {/* Blood drip from mouth */}
-                <path d="M290 460 Q288 510 292 540" stroke="#cc0000" strokeWidth="5" strokeLinecap="round"/>
-                <path d="M315 455 Q318 500 314 525" stroke="#cc0000" strokeWidth="4" strokeLinecap="round"/>
+                <path d="M290 460 Q288 510 292 540" stroke="#cc0000" strokeWidth="5" strokeLinecap="round" />
+                <path d="M315 455 Q318 500 314 525" stroke="#cc0000" strokeWidth="4" strokeLinecap="round" />
                 {/* Hat */}
-                <path d="M95 210 L505 210 L462 75 L138 75 Z" fill="#030000" stroke="#ff0000" strokeWidth="4"/>
+                <path d="M95 210 L505 210 L462 75 L138 75 Z" fill="#030000" stroke="#ff0000" strokeWidth="4" />
                 {/* Face cracks */}
-                <path d="M215 180 L240 230 L220 280" stroke="#cc0000" strokeWidth="2.5" strokeLinecap="round"/>
-                <path d="M370 190 L350 240 L375 290" stroke="#cc0000" strokeWidth="2.5" strokeLinecap="round"/>
-                <path d="M280 300 L260 340 L275 380" stroke="#880000" strokeWidth="2" strokeLinecap="round"/>
+                <path d="M215 180 L240 230 L220 280" stroke="#cc0000" strokeWidth="2.5" strokeLinecap="round" />
+                <path d="M370 190 L350 240 L375 290" stroke="#cc0000" strokeWidth="2.5" strokeLinecap="round" />
+                <path d="M280 300 L260 340 L275 380" stroke="#880000" strokeWidth="2" strokeLinecap="round" />
               </svg>
             </motion.div>
             {/* Red vignette */}

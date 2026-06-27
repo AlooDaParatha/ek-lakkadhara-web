@@ -1,23 +1,87 @@
-[debug] [2026-06-27T14:49:32.645Z] ----------------------------------------------------------------------
-[debug] [2026-06-27T14:49:32.653Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\anshy\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
-[debug] [2026-06-27T14:49:32.654Z] CLI Version:   15.22.3
-[debug] [2026-06-27T14:49:32.654Z] Platform:      win32
-[debug] [2026-06-27T14:49:32.654Z] Node Version:  v22.22.0
-[debug] [2026-06-27T14:49:32.654Z] Detected Agent: unknown
-[debug] [2026-06-27T14:49:32.654Z] Time:          Sat Jun 27 2026 20:19:32 GMT+0530 (India Standard Time)
-[debug] [2026-06-27T14:49:32.655Z] ----------------------------------------------------------------------
+[debug] [2026-06-27T15:04:01.921Z] ----------------------------------------------------------------------
+[debug] [2026-06-27T15:04:01.933Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\anshy\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2026-06-27T15:04:01.933Z] CLI Version:   15.22.3
+[debug] [2026-06-27T15:04:01.933Z] Platform:      win32
+[debug] [2026-06-27T15:04:01.933Z] Node Version:  v22.22.0
+[debug] [2026-06-27T15:04:01.934Z] Detected Agent: unknown
+[debug] [2026-06-27T15:04:01.934Z] Time:          Sat Jun 27 2026 20:34:01 GMT+0530 (India Standard Time)
+[debug] [2026-06-27T15:04:01.934Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2026-06-27T14:49:32.658Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2026-06-27T15:04:06.368Z] Object "/hosting" in "firebase.json" has unknown property: {"additionalProperty":"framework"}
+[debug] [2026-06-27T15:04:06.369Z] Field "/hosting" in "firebase.json" is possibly invalid: must be array
+[debug] [2026-06-27T15:04:06.369Z] Field "/hosting" in "firebase.json" is possibly invalid: must match a schema in anyOf
+[debug] [2026-06-27T15:04:06.376Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-06-27T15:04:06.376Z] > authorizing via signed-in user (anshyadav15jan2010@gmail.com)
+[debug] [2026-06-27T15:04:06.376Z] [iam] checking project eklakkadhara for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2026-06-27T15:04:06.379Z] Checked if tokens are valid: true, expires at: 1782575765391
+[debug] [2026-06-27T15:04:06.379Z] Checked if tokens are valid: true, expires at: 1782575765391
+[debug] [2026-06-27T15:04:06.381Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/eklakkadhara:testIamPermissions [none]
+[debug] [2026-06-27T15:04:06.381Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/eklakkadhara:testIamPermissions  x-goog-user-project=eklakkadhara
+[debug] [2026-06-27T15:04:06.381Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/eklakkadhara:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-06-27T15:04:07.938Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/eklakkadhara:testIamPermissions 200
+[debug] [2026-06-27T15:04:07.938Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/eklakkadhara:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-06-27T15:04:07.938Z] Checked if tokens are valid: true, expires at: 1782575765391
+[debug] [2026-06-27T15:04:07.938Z] Checked if tokens are valid: true, expires at: 1782575765391
+[debug] [2026-06-27T15:04:07.939Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/eklakkadhara [none]
+[debug] [2026-06-27T15:04:08.697Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/eklakkadhara 200
+[debug] [2026-06-27T15:04:08.697Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/eklakkadhara {"projectId":"eklakkadhara","projectNumber":"19333667614","displayName":"eklakkadhara","name":"projects/eklakkadhara","resources":{"hostingSite":"eklakkadhara"},"state":"ACTIVE","etag":"1_65e8ed10-a981-44b5-8e8c-07e2f19d5ca8"}
 [info] 
-     ######## #### ########  ######## ########     ###     ######  ########
-     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
-     ######    ##  ########  ######   ########  #########  ######  ######
-     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
-     ##       #### ##     ## ######## ########  ##     ##  ######  ########
-
-You're about to initialize a Firebase project in this directory:
-
-  C:\Users\anshy\Desktop\My Files\Main\ek-lakkadhara-web
-
-[debug] [2026-06-27T14:49:36.749Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
-[debug] [2026-06-27T14:49:36.749Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[info] === Deploying to 'eklakkadhara'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2026-06-27T15:04:08.703Z] Checked if tokens are valid: true, expires at: 1782575765391
+[debug] [2026-06-27T15:04:08.703Z] Checked if tokens are valid: true, expires at: 1782575765391
+[debug] [2026-06-27T15:04:08.703Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/eklakkadhara/sites/eklakkadhara [none]
+[debug] [2026-06-27T15:04:09.929Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/eklakkadhara/sites/eklakkadhara 200
+[debug] [2026-06-27T15:04:09.929Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/eklakkadhara/sites/eklakkadhara {"name":"projects/eklakkadhara/sites/eklakkadhara","defaultUrl":"https://eklakkadhara.web.app","type":"DEFAULT_SITE"}
+[debug] [2026-06-27T15:04:09.931Z] Checked if tokens are valid: true, expires at: 1782575765391
+[debug] [2026-06-27T15:04:09.931Z] Checked if tokens are valid: true, expires at: 1782575765391
+[debug] [2026-06-27T15:04:09.931Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/eklakkadhara/versions [none]
+[debug] [2026-06-27T15:04:09.931Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/eklakkadhara/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2026-06-27T15:04:11.020Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/eklakkadhara/versions 200
+[debug] [2026-06-27T15:04:11.020Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/eklakkadhara/versions {"name":"projects/19333667614/sites/eklakkadhara/versions/82001aac8df3c2fb","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[eklakkadhara]: beginning deploy... 
+[info] i  hosting[eklakkadhara]: found 11 files in public 
+[debug] [2026-06-27T15:04:11.038Z] [hosting] uploading with 200 concurrency
+[debug] [2026-06-27T15:04:11.043Z] Checked if tokens are valid: true, expires at: 1782575765391
+[debug] [2026-06-27T15:04:11.044Z] Checked if tokens are valid: true, expires at: 1782575765391
+[debug] [2026-06-27T15:04:11.045Z] [hosting] hash cache [cHVibGlj] stored for 11 files
+[debug] [2026-06-27T15:04:11.045Z] [hosting][hash queue][FINAL] {"max":1,"min":0,"avg":0,"active":0,"complete":11,"success":11,"errored":0,"retried":0,"total":11,"elapsed":4}
+[debug] [2026-06-27T15:04:11.045Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/19333667614/sites/eklakkadhara/versions/82001aac8df3c2fb:populateFiles [none]
+[debug] [2026-06-27T15:04:11.045Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/19333667614/sites/eklakkadhara/versions/82001aac8df3c2fb:populateFiles {"files":{"/window.svg":"6bd2003bd35bb32c1c0d99ab3aeac0cc1edaefd79f27df1d954bc87184048d74","/watchtower.png":"142a32111c791f7ceafa8fb96a08e8d3a39f879d75d8dbf7ad3f5fd0fa31245f","/vercel.svg":"529a1a21b4a82475a82db26173c28d7b27e2dc9d4b900eaf1c5329d96eea4ddd","/shrine.png":"dd0043af354564e124a84ff842f3a190ed878e8b1a8984e535d38bbd22bcf910","/next.svg":"0665b9ab4493aa9d7e988b57024e28772ae543e804b8cf6b0a3633854b7c3c7f","/mill.png":"b6b93ecde93b607ab52039d06c41cbe58d18841be9a39086d8bbe05d39a290a5","/lumberjack.png":"8efdf37dd53764ed913c0926cb8fa330883acac0baeb92574415545d1c62b11a","/journal_page.png":"6f40a0694f3cd9b2e48125902c73c69ec5d5754717b1582243af2bd003e68d1a","/globe.svg":"6502a3e6120bf2d6e8417e7c40bb57fb8a6954de9c86d3f43076a75b60cd23a2","/file.svg":"5a09df6187e21aa9a7d05094389385876ac93c818e1dcbb77a26a8fe408bf79c","/cabin.png":"e188fa02563b92f9e50fb7922b4c62583a376c1c4c05d5a12cb442451996d4e4"}}
+[debug] [2026-06-27T15:04:12.064Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/19333667614/sites/eklakkadhara/versions/82001aac8df3c2fb:populateFiles 200
+[debug] [2026-06-27T15:04:12.064Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/19333667614/sites/eklakkadhara/versions/82001aac8df3c2fb:populateFiles {"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/eklakkadhara/versions/82001aac8df3c2fb/files"}
+[debug] [2026-06-27T15:04:12.064Z] [hosting][populate queue][FINAL] {"max":1021,"min":1021,"avg":1021,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1021}
+[debug] [2026-06-27T15:04:12.065Z] [hosting] uploads queued: 0
+[debug] [2026-06-27T15:04:12.065Z] [hosting][upload queue][FINAL] {"max":0,"min":9999999999,"avg":0,"active":0,"complete":0,"success":0,"errored":0,"retried":0,"total":0,"elapsed":1782572652065}
+[info] +  hosting[eklakkadhara]: file upload complete 
+[debug] [2026-06-27T15:04:12.066Z] [hosting] deploy completed after 1043ms
+[debug] [2026-06-27T15:04:12.067Z] [
+  {
+    "config": {
+      "public": "public",
+      "framework": "next",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "site": "eklakkadhara"
+    },
+    "version": "projects/19333667614/sites/eklakkadhara/versions/82001aac8df3c2fb"
+  }
+]
+[info] i  hosting[eklakkadhara]: finalizing version... 
+[debug] [2026-06-27T15:04:12.069Z] Checked if tokens are valid: true, expires at: 1782575765391
+[debug] [2026-06-27T15:04:12.069Z] Checked if tokens are valid: true, expires at: 1782575765391
+[debug] [2026-06-27T15:04:12.069Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/eklakkadhara/versions/82001aac8df3c2fb updateMask=status%2Cconfig
+[debug] [2026-06-27T15:04:12.069Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/eklakkadhara/versions/82001aac8df3c2fb {"status":"FINALIZED","config":{}}
+[debug] [2026-06-27T15:04:12.837Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/eklakkadhara/versions/82001aac8df3c2fb 200
+[debug] [2026-06-27T15:04:12.837Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/eklakkadhara/versions/82001aac8df3c2fb {"name":"projects/19333667614/sites/eklakkadhara/versions/82001aac8df3c2fb","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2026-06-27T15:04:16.440883Z","createUser":{"email":"anshyadav15jan2010@gmail.com"},"finalizeTime":"2026-06-27T15:04:18.742957Z","finalizeUser":{"email":"anshyadav15jan2010@gmail.com"}}
+[debug] [2026-06-27T15:04:12.838Z] [hosting] finalized version for eklakkadhara:[object Object]
+[info] +  hosting[eklakkadhara]: version finalized 
+[info] i  hosting[eklakkadhara]: releasing new version... 
+[debug] [2026-06-27T15:04:12.838Z] Checked if tokens are valid: true, expires at: 1782575765391
+[debug] [2026-06-27T15:04:12.838Z] Checked if tokens are valid: true, expires at: 1782575765391
+[debug] [2026-06-27T15:04:12.839Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/eklakkadhara/channels/live/releases versionName=projects%2F19333667614%2Fsites%2Feklakkadhara%2Fversions%2F82001aac8df3c2fb
+[debug] [2026-06-27T15:04:12.839Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/eklakkadhara/channels/live/releases {}
