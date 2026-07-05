@@ -54,6 +54,8 @@ body {
   pointer-events: none;
   z-index: 9999;
   animation: grain 8s steps(10) infinite;
+  will-change: transform;
+  transform: translateZ(0);
 }
 
 @keyframes grain {
@@ -85,6 +87,8 @@ body {
   background-size: 100% 4px, 6px 100%;
   pointer-events: none;
   z-index: 9990;
+  will-change: opacity, transform;
+  transform: translateZ(0);
 }
 
 /* Vignette Overlay */
@@ -179,6 +183,8 @@ body {
 
 .glitch-text {
   position: relative;
+  will-change: transform, clip-path;
+  transform: translateZ(0);
 }
 
 .glitch-text::before,

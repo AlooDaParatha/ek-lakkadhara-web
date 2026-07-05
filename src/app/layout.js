@@ -35,7 +35,18 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${inter.variable} ${cinzel.variable} ${specialElite.variable} h-full antialiased`}
     >
+      <head>
+        <link rel="preload" href="/cabin.png" as="image" />
+        <link rel="preload" href="/lumberjack.png" as="image" />
+        <link rel="preload" href="/mill.png" as="image" />
+      </head>
       <body className="min-h-full flex flex-col bg-[#050505] text-[#d2e4f0] overflow-x-hidden selection:bg-[#8a0303] selection:text-white">
+        {/* Pre-cache SVG shaders for instantaneous rendering */}
+        <svg width="0" height="0" className="hidden absolute pointer-events-none" aria-hidden="true">
+          <filter id="noiseFilter">
+            <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch" />
+          </filter>
+        </svg>
         <SmoothScrollProvider>
           {children}
         </SmoothScrollProvider>

@@ -35,8 +35,26 @@ export default function FlashlightOverlay() {
       }
     };
 
+    const handleTouchMove = (e) => {
+      if (e.touches.length > 0) {
+        const touch = e.touches[0];
+        setMousePos({ x: touch.clientX, y: touch.clientY });
+        if (typeof window !== 'undefined') {
+          window.__mouseX = touch.clientX;
+          window.__mouseY = touch.clientY;
+          window.dispatchEvent(new CustomEvent('flashlightMove', { detail: { x: touch.clientX, y: touch.clientY } }));
+        }
+      }
+    };
+
     window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
+    window.addEventListener('touchmove', handleTouchMove);
+    window.addEventListener('touchstart', handleTouchMove);
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('touchmove', handleTouchMove);
+      window.removeEventListener('touchstart', handleTouchMove);
+    };
   }, []);
 
   // Battery drain logic

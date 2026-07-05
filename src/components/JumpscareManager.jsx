@@ -288,7 +288,7 @@ export default function JumpscareManager() {
             transition={{ duration: 0.1 }}
             className="fixed inset-0 bg-[#050505] z-[9996] pointer-events-none flex items-center justify-center"
           >
-            <div className="w-full h-full max-w-3xl max-h-3xl filter contrast-[300%] brightness-[35%] mix-blend-screen select-none">
+            <div className="w-[90vw] h-[90vh] max-w-3xl max-h-3xl filter contrast-[300%] brightness-[35%] mix-blend-screen select-none" style={{ willChange: 'transform, opacity', transform: 'translateZ(0)' }}>
               <svg viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
                 <path d="M150 100 Q250 80 350 100 Q400 200 400 300 Q400 450 250 480 Q100 450 100 300 Q100 200 150 100 Z" fill="#1c0404" stroke="#8a0303" strokeWidth="4" />
                 <circle cx="200" cy="220" r="30" fill="#000" stroke="#ff0000" strokeWidth="4" />
@@ -322,8 +322,8 @@ export default function JumpscareManager() {
             style={{ backgroundColor: '#ffffff' }}
           >
             {/* Pure white flash then aggressive face */}
-            <div className="absolute inset-0 flex items-center justify-center bg-black">
-              <svg viewBox="0 0 600 700" className="w-full h-full max-w-3xl" fill="none">
+            <div className="absolute inset-0 flex items-center justify-center bg-black" style={{ willChange: 'transform, opacity', transform: 'translateZ(0)' }}>
+              <svg viewBox="0 0 600 700" className="w-[95vw] h-[95vh] max-w-3xl max-h-3xl" fill="none">
                 {/* Head */}
                 <ellipse cx="300" cy="340" rx="200" ry="280" fill="#0a0000" stroke="#cc0000" strokeWidth="5" />
                 {/* Wide-open terrified eyes */}
@@ -512,8 +512,9 @@ export default function JumpscareManager() {
               animate={{ opacity: [0, 0, 1, 1, 0] }}
               transition={{ duration: 0.32, times: [0, 0.15, 0.3, 0.7, 1] }}
               className="absolute inset-0 flex items-center justify-center bg-[#000000]"
+              style={{ willChange: 'transform, opacity', transform: 'translateZ(0)' }}
             >
-              <svg viewBox="0 0 600 700" className="w-full h-full max-w-4xl" fill="none">
+              <svg viewBox="0 0 600 700" className="w-[95vw] h-[95vh] max-w-4xl max-h-4xl" fill="none">
                 {/* Head — bigger and more distorted */}
                 <ellipse cx="300" cy="340" rx="210" ry="290" fill="#060000" stroke="#ff0000" strokeWidth="7" />
                 {/* Wide-open terrorised eyes */}

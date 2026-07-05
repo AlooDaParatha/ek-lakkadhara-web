@@ -14,7 +14,8 @@ export default function FogCanvas() {
 
     let animationFrameId;
     let particles = [];
-    const maxParticles = 65;
+    // Optimize particle count for mobile screens
+    const maxParticles = typeof window !== 'undefined' && window.innerWidth < 768 ? 25 : 65;
     
     // Mouse interaction variables
     const mouse = { x: -1000, y: -1000, radius: 200, active: false };
@@ -37,8 +38,22 @@ export default function FogCanvas() {
       mouse.active = false;
     };
 
+    const handleTouchMove = (e) => {
+      if (e.touches.length > 0) {
+        mouse.x = e.touches[0].clientX;
+        mouse.y = e.touches[0].clientY;
+        mouse.active = true;
+      }
+    };
+
+    const handleTouchEnd = () => {
+      mouse.active = false;
+    };
+
     window.addEventListener('mousemove', handleMouseMove);
     document.addEventListener('mouseleave', handleMouseLeave);
+    window.addEventListener('touchmove', handleTouchMove);
+    document.addEventListener('touchend', handleTouchEnd);
 
     // Particle Class
     class Particle {
@@ -144,6 +159,8 @@ export default function FogCanvas() {
       window.removeEventListener('resize', handleResize);
       window.removeEventListener('mousemove', handleMouseMove);
       document.removeEventListener('mouseleave', handleMouseLeave);
+      window.removeEventListener('touchmove', handleTouchMove);
+      document.removeEventListener('touchend', handleTouchEnd);
     };
   }, []);
 

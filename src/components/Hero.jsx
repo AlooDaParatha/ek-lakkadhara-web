@@ -87,7 +87,7 @@ export default function Hero() {
         <h1 
           onClick={handleManualScare}
           data-text="EK LAKKADHARA"
-          className="text-6xl md:text-9xl font-horror-serif font-bold tracking-widest text-[#d2e4f0] uppercase cursor-pointer glitch-text chromatic-aberration select-none moon-glow"
+          className="text-4xl sm:text-6xl md:text-9xl font-horror-serif font-bold tracking-widest text-[#d2e4f0] uppercase cursor-pointer glitch-text chromatic-aberration select-none moon-glow"
         >
           EK LAKKADHARA
         </h1>
